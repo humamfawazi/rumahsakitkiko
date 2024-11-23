@@ -9,4 +9,5 @@ Route::get('/', function () {
 
 Route::get('/home', [PageController::class, 'home']);
 Route::get('/login', [PageController::class, 'login']);
+Route::get('/perawat',[PageController::class, 'perawat']);
 

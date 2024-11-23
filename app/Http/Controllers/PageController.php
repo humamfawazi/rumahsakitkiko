@@ -15,4 +15,8 @@ class PageController extends Controller
     {
         return view('login');
     }
+    public function perawat()
+    {
+        return view('perawat');
+    }
 }
