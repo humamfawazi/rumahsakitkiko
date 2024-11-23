@@ -28,7 +28,7 @@
   
 </head>
 
-<body style="background-color: #0e2238">
+<body style="background-color: #0e2238 ">
   <!-- Content -->
 
   <div class="container-xxl" style="padding: 100px; width:600px; padding-bottom: 50px;" >
@@ -46,36 +46,33 @@
             </div>
             <br>
             <!-- /Logo -->
-            <form method="POST">
-              <div class="mb-3">
-                <label for="email" class="form-label">Username</label>
-                <input type="text" class="form-control" name="username" placeholder="username" autofocus />
+            <form action="/sesi/login" method="POST">
+              @csrf
+              @if ($errors->has('login'))
+              <div class="alert alert-danger">
+              {{ $errors->first('login') }}
               </div>
-              <div class="mb-3 form-password-toggle">
-                <div class="d-flex justify-content-between">
-                  <label class="form-label" for="password">Password</label>
+              @endif
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="email" autofocus />
+                @if ($errors->has('email'))
+                <small class="text-danger">{{ $errors->first('email') }}</small>
+                 @endif
 
-                </div>
-                <div class="input-group input-group-merge">
-                  <!-- Input password -->
-                  <input type="password" class="form-control" id="password" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-                  <!-- Tombol toggle -->
-                  <span class="input-group-text cursor-pointer" id="togglePassword">
-                    <i class="bx bx-hide"></i>
-                  </span>
-                </div>
-              </div>
-              <br>
-              <div class="mb-3">
-                {{-- <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="remember-me" />
-                  <label class="form-check-label" for="remember-me"> Remember Me </label>
-                </div> --}}
               </div>
               <div class="mb-3">
-                <button class="btn btn-primary d-grid w-100" type="submit" name="login">Sign in</button>
+                <label class="form-label" for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="password" />
+                @if ($errors->has('password'))
+                <small class="text-danger">{{ $errors->first('password') }}</small>
+                @endif
+              </div>
+              <div class="mb-3">
+                <button name="submit" class="btn btn-primary" type="submit">Login</button>
               </div>
             </form>
+            
           </div>
         </div>
         <!-- /Register -->
