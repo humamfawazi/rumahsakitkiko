@@ -7,7 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 }); 
 
-Route::get('/home', function () {
-    return view('home');
-}); 
+Route::get('/home', [PageController::class, 'home']);
+Route::get('/login', [PageController::class, 'login']);
 
