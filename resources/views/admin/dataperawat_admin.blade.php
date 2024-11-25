@@ -107,39 +107,6 @@
                     Data Perawat
                 </h1>
               </div>
-            
-              <div class="mb-3">
-                <form>
-                <label for="name" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="name" placeholder="Nama Pasien">
-              </div>
-              <div class="mb-3">
-                <label for="dob" class="form-label">Tanggal Lahir</label>
-                <input type="text" class="form-control" id="dob" placeholder="DD-MM-YYYY">
-              </div>
-              <div class="mb-3">
-                <label for="sex" class="form-label">Kelamin</label>
-                <select class="form-select" aria-label="Default select example">
-                <option selected>None</option>
-                <option value="1">Laki-Laki</option>
-                <option value="2">Perempuan</option>
-              </select>
-              </div>
-              <div class="mb-3">
-                <label for="location" class="form-label">Alamat</label>
-                <input type="text" class="form-control" id="location" placeholder="Ds. Ketanggi RT02/RW01">
-              </div>
-              <div class="mb-3">
-                <label for="number" class="form-label">Nomor Rekam Medis</label>
-                <input type="text" class="form-control" id="number" placeholder="69">
-              </div>
-              <div class="mb-3">
-                <label for="bio" class="form-label">Diagnosis</label>
-                <textarea class="form-control" id="bio" rows="3" placeholder="Diagnosis pasien..."></textarea>
-              </div>
-              <button type="submit" class="form-control">Simpan Data</button>
-            </form>
-        </div>
         <!--main-->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

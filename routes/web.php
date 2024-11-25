@@ -12,5 +12,6 @@ Route::get('/selamatdatang', [PageController::class, 'selamatdatang']);
 Route::get('/sesi', [PageController::class, 'index']);
 Route::get('/home', [PageController::class, 'home']);
 Route::post('/sesi/loginkaryawan', [PageController::class, 'loginkaryawan']);
-Route::get('/perawat',[PageController::class,'perawat']);
+Route::get('perawat/inputdata',[PageController::class,'inputdata_pasien']);
+Route::get('admin/dataperawat',[PageController::class,'dataperawat_admin']);
 

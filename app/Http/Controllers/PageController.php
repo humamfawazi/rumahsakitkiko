@@ -38,7 +38,7 @@ class PageController extends Controller
     {
         return view("sesi/home"); 
     } 
-    public function perawat()
+    public function inputdata_pasien()
     {
         return view('perawat/inputdata_perawat');
     }
@@ -46,6 +46,10 @@ class PageController extends Controller
     public function selamatdatang()
     {
         return view("selamatdatang"); 
+    }
+    public function dataperawat_admin()
+    {
+        return view('admin/dataperawat_admin');
     }
 
 }
