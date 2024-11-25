@@ -11,6 +11,6 @@ Route::get('/', function () {
 Route::get('/selamatdatang', [PageController::class, 'selamatdatang']);
 Route::get('/sesi', [PageController::class, 'index']);
 Route::get('/home', [PageController::class, 'home']);
-Route::get('/login', [PageController::class, 'login']);
+Route::post('/sesi/loginkaryawan', [PageController::class, 'loginkaryawan']);
 Route::get('/perawat',[PageController::class,'perawat']);
 
