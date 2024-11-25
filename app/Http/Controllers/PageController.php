@@ -12,7 +12,7 @@ class PageController extends Controller
         return view("sesi/index");
     }
 
-    public function login(Request $request)
+    public function loginkaryawan(Request $request)
 {
     $request->validate([
         'email' => 'required',
@@ -30,7 +30,7 @@ class PageController extends Controller
     if (Auth::attempt($infologin)) {
         return redirect('home')->with('success ', 'Berhasil Login!');
     } else {
-        return back()->withErrors(['login' => 'Email atau password salah'])->withInput();
+        return back()->withErrors(['loginkaryawan' => 'Email atau password salah'])->withInput();
     }
    
 }
@@ -41,6 +41,11 @@ class PageController extends Controller
     public function perawat()
     {
         return view('perawat/inputdata_perawat');
+    }
+
+    public function selamatdatang()
+    {
+        return view("selamatdatang"); 
     }
 
 }

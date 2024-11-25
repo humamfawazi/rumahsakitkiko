@@ -7,6 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 }); 
 
+
+Route::get('/selamatdatang', [PageController::class, 'selamatdatang']);
 Route::get('/sesi', [PageController::class, 'index']);
 Route::get('/home', [PageController::class, 'home']);
 Route::get('/login', [PageController::class, 'login']);

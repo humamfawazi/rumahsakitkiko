@@ -31,52 +31,58 @@
 <body style="background-color: #0e2238 ">
   <!-- Content -->
 
-  <div class="container-xxl" style="padding: 100px; width:600px; padding-bottom: 50px;" >
-
-    <div class="authentication-wrapper authentication-basic container-p-y">
-      <div class="authentication-inner">
-        <!-- Register -->
-        <div class="card">
-          <div class="card-body">
-            <!-- Logo -->
-            <div class="app-brand justify-content-center">
-              <a href="index.html" class="app-brand-link gap-2">
-                <center><span class="app-brand-text demo text-body fw-bolder"><span style="text-transform: uppercase;">R</span>egister</center>
-              </a>
-            </div>
-            <br>
-            <!-- /Logo -->
-            <form action="/sesi/login" method="POST">
-              @csrf
-              @if ($errors->has('login'))
-              <div class="alert alert-danger">
-              {{ $errors->first('login') }}
-              </div>
-              @endif
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" placeholder="email" autofocus />
-                @if ($errors->has('email'))
-                <small class="text-danger">{{ $errors->first('email') }}</small>
-                 @endif
-
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="password">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="password" />
-                @if ($errors->has('password'))
-                <small class="text-danger">{{ $errors->first('password') }}</small>
-                @endif
-              </div>
-              <div class="mb-3">
-                <button name="submit" class="btn btn-primary" type="submit">Login</button>
-              </div>
-            </form>
-            
-          </div>
-        </div>
-        <!-- /Register -->
+  <div class="row align-items-start">
+    <div class="col-5">
+      <div class="imglogin" style="margin-left: 20px" >
+          <img src="{{ asset('storage/login.png') }}" alt="login" style="width: 600px; margin-left:0px">
       </div>
+    </div>
+    <div class="col-7">
+      <div id="layoutAuthentication">
+          <div id="layoutAuthentication_content">
+              <main>
+                  <div class="container" style="margin-left: 0px; margin-top:40px">
+                      <div class="row justify-content-center">
+                          <div class="col-lg-10">
+                              <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                  <div class="card-header"><h3 class="text-center font-weight-light my-4">Silahkan login</h3></div>
+                                  <div class="card-body">
+                                    <form action="/sesi/loginkaryawan" method="POST">
+                                      @csrf
+                                      @if ($errors->has('loginkaryawan'))
+                                      <div class="alert alert-danger">
+                                      {{ $errors->first('loginkaryawan') }}
+                                      </div>
+                                      @endif
+                                      <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" name="email" placeholder="email" autofocus />
+                                        @if ($errors->has('email'))
+                                        <small class="text-danger">{{ $errors->first('email') }}</small>
+                                         @endif
+                        
+                                      </div>
+                                      <div class="mb-3">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input type="password" class="form-control" name="password" placeholder="password" />
+                                        @if ($errors->has('password'))
+                                        <small class="text-danger">{{ $errors->first('password') }}</small>
+                                        @endif
+                                      </div>
+                                      <div class="mb-3">
+                                        <button name="submit" class="btn btn-primary" type="submit">Login</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="card-footer text-center py-3">
+                                      <div class="small"><a href="">Silahkan lengkapi form login tersebut</a></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </main>
+          </div>
     </div>
   </div>
 
