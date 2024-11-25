@@ -40,7 +40,7 @@ class PageController extends Controller
     } 
     public function perawat()
     {
-        return view('perawat');
+        return view('perawat/inputdata_perawat');
     }
 
 }
