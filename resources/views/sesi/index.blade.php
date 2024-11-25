@@ -31,7 +31,7 @@
 <body style="background-color: #0e2238 ">
   <!-- Content -->
 
-  <div class="container-xxl" style="padding: 100px; width:600px; padding-bottom: 50px;" >
+  <div class="container-xxl" style="padding: 100px; width:600px; padding-bottom: 50px; margin-top:50px" >
 
     <div class="authentication-wrapper authentication-basic container-p-y">
       <div class="authentication-inner">
@@ -46,11 +46,11 @@
             </div>
             <br>
             <!-- /Logo -->
-            <form action="/sesi/login" method="POST">
+            <form action="/sesi/loginkaryawan" method="POST">
               @csrf
-              @if ($errors->has('login'))
+              @if ($errors->has('loginkaryawan'))
               <div class="alert alert-danger">
-              {{ $errors->first('login') }}
+              {{ $errors->first('loginkaryawan') }}
               </div>
               @endif
               <div class="mb-3">
