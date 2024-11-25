@@ -30,7 +30,7 @@ class PageController extends Controller
     if (Auth::attempt($infologin)) {
         return redirect('home')->with('success ', 'Berhasil Login!');
     } else {
-        return back()->withErrors(['login' => 'Email atau password salah'])->withInput();
+        return back()->withErrors(['loginkaryawan' => 'Email atau password salah'])->withInput();
     }
 }
     public function home()

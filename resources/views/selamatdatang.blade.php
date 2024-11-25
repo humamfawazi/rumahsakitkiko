@@ -10,7 +10,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
     <script src="{{ asset('js/scripts.js') }}"></script>
 </head>
-<body>
+<body>  
     <!--container-->
     <div class="container-fluid p-0">
         <div class="row" style="height: 1000px">
