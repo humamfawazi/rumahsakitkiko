@@ -10,4 +10,5 @@ Route::get('/', function () {
 Route::get('/sesi', [PageController::class, 'index']);
 Route::get('/home', [PageController::class, 'home']);
 Route::get('/login', [PageController::class, 'login']);
+Route::get('/perawat',[PageController::class,'perawat']);
 

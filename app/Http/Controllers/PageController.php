@@ -32,14 +32,15 @@ class PageController extends Controller
     } else {
         return back()->withErrors(['login' => 'Email atau password salah'])->withInput();
     }
+   
+}
+    public function home()
+    {
+        return view("sesi/home"); 
+    } 
     public function perawat()
     {
         return view('perawat');
-    }
-}
-public function home()
-    {
-        return view("sesi/home"); 
     }
 
 }
