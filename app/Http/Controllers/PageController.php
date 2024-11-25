@@ -12,7 +12,7 @@ class PageController extends Controller
         return view("sesi/index");
     }
 
-    public function loginkaryawan(Request $request)
+    public function login(Request $request)
 {
     $request->validate([
         'email' => 'required',
@@ -33,14 +33,9 @@ class PageController extends Controller
         return back()->withErrors(['login' => 'Email atau password salah'])->withInput();
     }
 }
-    public function home()
+public function home()
     {
         return view("sesi/home"); 
-    }
-
-    public function selamatdatang()
-    {
-        return view("selamatdatang"); 
     }
 
 }
